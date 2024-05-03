@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #bfebe5;
+  color: #333;
+}
+
+h1,
+h2 {
+  color: #035c71;
+  text-align: center;
+}
+
+label,
+select,
+input,
+textarea,
+button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  /* Menyesuaikan lebar dengan container */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #035c71;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  /* Menyesuaikan lebar dengan container */
+}
+
+button:hover {
+  background-color: #007194;
+}
+
+.error {
+  color: red;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Memungkinkan item untuk bungkus jika tidak ada ruang */
+  justify-content: space-between;
+}
+
+.encryption,
+.decryption {
+  flex: 1 1 300px;
+  /* Flex basis 300px, tetapi bisa tumbuh dan menyusut */
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Tumpuk secara vertikal pada layar kecil */
+  }
+
+  .encryption,
+  .decryption {
+    margin: 10px 0;
+    /* Atur margin vertikal saja */
+  }
+}
+
+.button-reset {
+  width: 100px;
+  /* Atur lebar menjadi 50% dari container */
+}
+
+footer {
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  color: #ddd;
+  font-weight: normal;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  font-size: 0.8em;
+}
+
+footer a,
+footer a:link {
+  color: #035c71;
+  text-decoration: none;
+}
+
+label {
+  color: #035c71;
+}

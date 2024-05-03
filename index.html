@@ -1,0 +1,102 @@
+<!-- Nama  : Febrie Tsani Sovranita
+NPM   : 227006026
+Kelas : A -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AES Encryption and Decryption</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="judul">
+      <h1>Welcome To Encryption and Decryption Program Using Algorithm AES</h1>
+    </div>
+    <div class="container">
+      <div class="encryption">
+        <h2>AES Encryption</h2>
+        <label for="encryptKeySize">Select Key Size:</label>
+        <select id="encryptKeySize" onchange="updateKeyInputFormat('encrypt')">
+          <option value="128">128-bit</option>
+          <option value="192">192-bit</option>
+          <option value="256">256-bit</option>
+        </select>
+        <br />
+        <label for="encryptInputKey">Enter Key:</label>
+        <input
+          type="text"
+          id="encryptInputKey"
+          placeholder="Enter encryption key"
+        />
+        <p id="encryptKeyError" style="color: red"></p>
+        <br />
+        <label for="encryptInputText">Plaintext:</label>
+        <textarea
+          id="encryptInputText"
+          rows="4"
+          cols="50"
+          placeholder="Enter text to encrypt"
+        ></textarea>
+        <br />
+        <button onclick="encryptAES()">Encrypt</button>
+        <br />
+        <label for="encryptOutputText">The Result:</label>
+        <textarea
+          id="encryptOutputText"
+          rows="4"
+          cols="50"
+          placeholder="Result"
+          readonly
+        ></textarea>
+        <button onclick="resetFieldsEncrypt()" class="button-reset">
+          Clear
+        </button>
+      </div>
+      <div class="decryption">
+        <h2>AES Decryption</h2>
+        <label for="decryptKeySize">Select Key Size:</label>
+        <select id="decryptKeySize" onchange="updateKeyInputFormat('decrypt')">
+          <option value="128">128-bit</option>
+          <option value="192">192-bit</option>
+          <option value="256">256-bit</option>
+        </select>
+        <br />
+        <label for="decryptInputKey">Enter Key:</label>
+        <input
+          type="text"
+          id="decryptInputKey"
+          placeholder="Enter decryption key"
+        />
+        <p id="decryptKeyError" style="color: red"></p>
+        <br />
+        <label for="decryptInputText">Chipher Text:</label>
+        <textarea
+          id="decryptInputText"
+          rows="4"
+          cols="50"
+          placeholder="Enter text to decrypt"
+        ></textarea>
+        <br />
+        <button onclick="decryptAES()">Decrypt</button>
+        <br />
+        <label for="decryptOutputText">The Result:</label>
+        <textarea
+          id="decryptOutputText"
+          rows="4"
+          cols="50"
+          placeholder="Result"
+          readonly
+        ></textarea>
+        <button onclick="resetFieldsDecrypt()" class="button-reset">
+          Clear
+        </button>
+      </div>
+    </div>
+    <footer>
+      <a target="blank" href="#">Febrie Tsani Sovranita-227006026 @ 2024</a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="aes.js"></script>
+  </body>
+</html>
